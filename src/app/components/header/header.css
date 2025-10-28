@@ -1,0 +1,13 @@
+header {
+  align-items: center;
+  background-color: var(--primary);
+  border-bottom: solid 2.5px var(--secondary);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 160px;
+  padding: 0.4rem 2rem 0.8rem 1rem;
+  position: relative;
+}
