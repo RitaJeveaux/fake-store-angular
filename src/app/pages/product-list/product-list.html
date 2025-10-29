@@ -11,9 +11,11 @@
               <p class="card-text">
                 <strong>{{ product.price | currency:'US ' }}</strong>
               </p>
-              <a [routerLink]="['/product', product.id]" class="btn btn-primary btn-fakely">
-                Details
-              </a>
+              <div class="text-center">
+                <a [routerLink]="['/product', product.id]" class="btn btn-primary btn-fakely">
+                  Details
+                </a>
+              </div>
             </div>
           </div>
         </div>
