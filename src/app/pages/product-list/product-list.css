@@ -1,0 +1,36 @@
+.card {
+  align-items: center;
+  border-radius: 4px;
+  width: 90%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.card-body-fakely {
+  text-align: center;
+}
+
+.btn-fakely {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  width: 350px;
+}
+
+.btn-fakely:hover {
+  background-color: #ff5252;
+}
