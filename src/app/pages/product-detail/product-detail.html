@@ -10,7 +10,7 @@
           {{ product.title | uppercase}}
         </h3>
         <p class="card-text">{{ product.description }}</p>
-         <p class="card-text">{{ product.category | titlecase}}</p>
+        <p class="card-text category">{{ product.category | titlecase}}</p>
         <div>
           <span>⭐ {{ product.rating.rate.toFixed(1) }} </span>
           <span>({{ product.rating.count }} reviews)</span>

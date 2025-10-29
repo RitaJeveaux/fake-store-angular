@@ -1,0 +1,15 @@
+.btn-outline-primary {
+  background-color: #fff;
+  color: var(--primary)
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+h4 {
+  text-align: center;
+  color: var(--primary)
+}
