@@ -1,5 +1,4 @@
 @if (product){
-@if (product){
 <div class="card product-detail">
   <div class="row g-0">
     <div class="col-md-5">
@@ -11,15 +10,20 @@
           {{ product.title | uppercase}}
         </h3>
         <p class="card-text">{{ product.description }}</p>
-        <p class="card-text">Preço: <strong>{{ product.price | currency:'BRL' }}</strong></p>
+         <p class="card-text">{{ product.category | titlecase}}</p>
+        <div>
+          <span>⭐ {{ product.rating.rate.toFixed(1) }} </span>
+          <span>({{ product.rating.count }} reviews)</span>
+        </div>
+        <div>
+          <p class="card-text">Price: <strong>{{ product.price | currency:'US ' }}</strong></p>
+        </div>
         <a routerLink="/" class="btn btn-secondary">Home</a>
         <!-- <button (click)="addToCart()" class="btn btn-primary ms-2">Adicionar ao carrinho</button> -->
       </div>
     </div>
   </div>
 </div>
-} @else {
-Carregando detalhes do produto...
-}
-
+}@else {
+Carregando detalhes do produto...;
 }

@@ -18,6 +18,9 @@
 
 .card-body-fakely {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .btn-fakely {
@@ -28,7 +31,8 @@
   cursor: pointer;
   padding: 0.5rem 1rem;
   transition: background 0.3s;
-  width: 350px;
+  margin-top: auto;
+  width: 15rem;
 }
 
 .btn-fakely:hover {

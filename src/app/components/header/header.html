@@ -1,10 +1,10 @@
 <header class="d-flex align-items-center justify-content-between p-3 bg-light shadow-sm">
-  <div class="d-flex align-items-center">
-    <img src="/logo.png" alt="logo" class="logo">
-  </div>
+  <a [routerLink]="['']" class="d-flex align-items-center">
+    <img src="/logo.png" alt="logo" class="logo" style="cursor: pointer;">
+  </a>
   <nav>
     <ul class="nav">
-      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item"><a [routerLink]="['']" class="nav-link">Home</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Cart</a></li>
     </ul>
