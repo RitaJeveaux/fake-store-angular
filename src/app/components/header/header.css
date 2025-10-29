@@ -12,7 +12,7 @@ header {
   position: relative;
 }
 
-header img {
+.logo {
   height: 280px;
   overflow: hidden;
 }
