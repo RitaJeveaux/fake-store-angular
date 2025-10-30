@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { CartState } from '../../store/cart-state';
 
 @Component({
   selector: 'app-cart-status',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class CartStatus {
   cartItemCount: Observable<number>;
 
-  constructor(private store: Store<{ cart: { items: any[] } }>) {
-   this.cartItemCount = this.store.select(state => state.cart.items.length); 
+  constructor(private store: Store<{ cart: CartState }>) {
+    this.cartItemCount = this.store.select(state => state.cart.items.length);
   }
 }

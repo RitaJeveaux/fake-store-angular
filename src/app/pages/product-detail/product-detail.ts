@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductService } from '../../services/product-service';
 import { Store } from '@ngrx/store';
 import * as CartActions from '../../store/cart-actions';
+import { Product } from '../../types';
 
 
 @Component({
@@ -13,7 +14,7 @@ import * as CartActions from '../../store/cart-actions';
   styleUrl: './product-detail.css',
 })
 export class ProductDetail implements OnInit {
-  product: any;
+  product: Product | undefined;
   isZoomed: boolean = false;
 
   constructor(
