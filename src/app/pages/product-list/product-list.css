@@ -36,5 +36,5 @@
 }
 
 .btn-fakely:hover {
-  background-color: #ff5252;
+  background-color: var(--secondary-dark);
 }

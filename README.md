@@ -1,4 +1,6 @@
 cheklist
 
 tornar responsivo
-implementar o carrinho
+implementar o carrinho - state
+formularios
+adicionar interface

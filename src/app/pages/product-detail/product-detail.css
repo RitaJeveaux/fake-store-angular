@@ -23,3 +23,12 @@
 .zoomed {
   transform: scale(1.05);
 }
+
+.btn-fakely {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-fakely:hover {
+  background-color: var(--secondary-dark);
+}
