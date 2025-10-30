@@ -11,3 +11,7 @@
   --text-light: #666666;
 }
 
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
