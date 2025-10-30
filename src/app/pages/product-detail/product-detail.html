@@ -20,7 +20,7 @@
             <p class="card-text">Price: <strong>{{ product.price | currency:'US ' }}</strong></p>
           </div>
           <div class="d-grid gap-2 my-4">
-            <button class="btn btn-fakely">Add to Cart</button>
+            <button (click)="addToCart()" class="btn btn-fakely">Add to Cart</button>
             <a routerLink="/" class="btn btn-secondary">Home</a>
           </div>
         </div>
@@ -30,6 +30,6 @@
 </div>
 }@else {
 <div class="d-flex justify-content-center align-items-center vh-100">
-  Carregando detalhes do produto...
+  Loading product details...
 </div>
 }
