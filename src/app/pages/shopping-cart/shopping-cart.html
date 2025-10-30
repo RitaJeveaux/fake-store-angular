@@ -1,0 +1,30 @@
+<h2>Shopping Cart</h2>
+
+@if (cartItems | async; as items) {
+@if (items.length > 0) {
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of items; track item.id) {
+    <tr>
+      <td>{{ item.title }}</td>
+      <td>{{ item.price | currency:'US ' }}</td>
+      <td>
+        <button (click)="removeItem(item.id)" class="btn btn-sm btn-danger">Delete</button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+<button (click)="clearCart()" class="btn btn-warning mt-4">Clean</button>
+<button [routerLink]="['/checkout']" class="btn btn-primary mt-3 ms-2">Checkout</button>
+} @else {
+<p>Your shopping cart is empty!</p>
+}
+}
