@@ -24,8 +24,10 @@ export class ProductDetail implements OnInit {
   ) { }
 
   addToCart() {
-    this.store.dispatch(CartActions.addProductToCart({ product: this.product }));
-    console.log('produto adicionado ao carrinho');
+    if (this.product) {
+      this.store.dispatch(CartActions.addProductToCart({ product: this.product }));
+      console.log('produto adicionado ao carrinho');
+    }
   }
 
 

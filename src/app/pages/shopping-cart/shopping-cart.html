@@ -7,6 +7,7 @@
     <tr>
       <th>Product</th>
       <th>Price</th>
+      <th>Quantity</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
     <tr>
       <td>{{ item.title }}</td>
       <td>{{ item.price | currency:'US ' }}</td>
+      <td>{{item.quantity}}</td>
       <td>
         <button (click)="removeItem(item.id)" class="btn btn-sm btn-danger">Delete</button>
       </td>
