@@ -1,9 +1,9 @@
 export interface CartState {
-  itens: any[];
+  items: any[];
   total: number;
 }
 
-export const initialState: CartState= {
-  itens: [],
+export const initialState: CartState = {
+  items: [],
   total: 0
 }
