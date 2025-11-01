@@ -1,7 +1,7 @@
 import { createReducer, on } from "@ngrx/store";
 import { addProductToCart, removeProductFromCart, clearCart } from "./cart-actions";
 import { CartState, initialState } from "./cart-state";
-import { CartItem } from "../types";
+import { CartItem } from "../types/types";
 
 function calculateTotal(items: CartItem[]): number {
   return items.reduce((sum, item) => sum + item.price * item.quantity, 0);

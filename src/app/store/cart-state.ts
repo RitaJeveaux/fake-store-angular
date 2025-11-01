@@ -1,5 +1,5 @@
 
-import { CartItem } from '../types';
+import { CartItem } from '../types/types';
 
 export interface CartState {
   items: CartItem[];

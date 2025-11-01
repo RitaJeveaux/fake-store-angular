@@ -11,7 +11,7 @@
             <th>Product</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th class="text-end">Actions</th>
+            <th class="text-end"></th>
           </tr>
         </thead>
         <tbody>
@@ -21,7 +21,11 @@
             <td>{{ item.price | currency:'US ' }}</td>
             <td>{{item.quantity}}</td>
             <td class="text-end">
-              <button (click)="removeItem(item.id)" class="btn btn-sm btn-danger">Delete</button>
+              <div>
+                <button (click)="addToCart(item)" class="btn btn-sm btn-outline-success"><strong>+</strong></button>
+
+                <button (click)="removeItem(item.id)" class="btn btn-sm btn-outline-danger ms-2"><strong>-</strong></button>
+              </div>
             </td>
           </tr>
           }
@@ -31,8 +35,8 @@
         <h4>Total: {{ totalPrice | async | currency:'US ' }}</h4>
       </div>
       <div class="d-flex justify-content-end">
-        <button (click)="clearCart()" class="btn btn-warning">Clean</button>
-        <button [routerLink]="['/checkout']" class="btn btn-primary ms-2">Checkout</button>
+        <button (click)="clearCart()" class="btn btn-outline-danger"><i class="bi bi-cart-x"></i> Clear Cart</button>
+        <button [routerLink]="['/checkout']" class="btn btn-fakely ms-2">Checkout</button>
       </div>
       } @else {
       <p class="text-center">Your shopping cart is empty!</p>

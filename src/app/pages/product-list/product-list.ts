@@ -3,7 +3,7 @@ import { ProductService } from '../../services/product-service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from "@angular/router";
 import { CategoryList } from '../../components/category-list/category-list';
-import { Product } from '../../types';
+import { Product } from '../../types/types';
 
 @Component({
   selector: 'app-product-list',

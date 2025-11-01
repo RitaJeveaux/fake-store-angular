@@ -3,9 +3,11 @@ import { Store } from '@ngrx/store';
 import { Observable, map } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import * as CartActions from '../../store/cart-actions';
-import { CartItem } from '../../types';
+import { CartItem } from '../../types/types';
 import { CartState } from '../../store/cart-state';
 import { RouterLink } from "@angular/router";
+import { Product } from '../../types/types';
+
 
 @Component({
   selector: 'app-shopping-cart',
@@ -22,6 +24,11 @@ export class ShoppingCart {
     this.totalPrice = this.cartItems.pipe(
       map(items => items.reduce((acc, item) => acc + item.price * item.quantity, 0))
     );
+  }
+
+  addToCart(product: Product) {
+    this.store.dispatch(CartActions.addProductToCart({ product }));
+    console.log('produto adicionado ao carrinho');
   }
 
   removeItem(productId: number) {
