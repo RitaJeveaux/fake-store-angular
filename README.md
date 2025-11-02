@@ -1,12 +1,12 @@
 # Fake Store Angular 🛍️
 
-<h4>Este é um projeto de estudo desenvolvido como parte do Módulo 4 do curso de Front-end da ADA, focado em Angular. A aplicação é um e-commerce simples que consome a <a href="https://fakestoreapi.com/">Fake Store API</a>para exibir e gerenciar produtos.</h4>
+<h4>Este é um projeto de estudo desenvolvido como parte do Módulo 4 do curso de Front-end da ADA, focado em Angular. A aplicação é um e-commerce que consome a <a href="https://fakestoreapi.com/">Fake Store API</a>para exibir e gerenciar produtos.</h4>
 
 <h4><i>A identidade visual, o nome "Fakely", a paleta de cores e o logo foram criados em colaboração com o ChatGPT (OpenAI), explorando a criatividade e a inteligência artificial no processo de design.</i></h4>
 
 ## ✨ Funcionalidades
 
-Atualmente, o projeto conta com as seguintes funcionalidades:
+O projeto conta com as seguintes funcionalidades:
 
 - **Listagem de Produtos:** Exibe todos os produtos disponíveis na página inicial.
 - **Filtragem por Categoria:** Permite ao usuário filtrar os produtos por categorias.
@@ -15,14 +15,8 @@ Atualmente, o projeto conta com as seguintes funcionalidades:
   - Adicionar e remover produtos.
   - Aumentar ou diminuir a quantidade de cada item.
   - Visualizar o subtotal e o total da compra.
-
-### 🚀 Funcionalidades Futuras
-
-O projeto ainda está em desenvolvimento. As próximas funcionalidades a serem implementadas são:
-
-- **Checkout:** Uma página de formulário para simular a finalização da compra.
-- **Validação de Formulário:** Implementação de validações para os campos do formulário de checkout.
-- **Responsividade:** Melhorar a adaptação da interface para telas menores.
+- **Checkout:** Uma página de formulário para simular a finalização da compra, com validação de campos.
+- **Responsividade:** A interface se adapta a diferentes tamanhos de tela, permitindo uma boa experiência em desktops, tablets e smartphones.
 
 ## 🛠️ Tecnologias Utilizadas
 
