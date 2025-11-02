@@ -1,0 +1,25 @@
+.btn-fakely-primary{
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  width: 1.8rem;
+}
+
+
+.btn-fakely-primary:hover {
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+.btn-fakely-secondary {
+  border-color: var(--secondary) !important;
+  color: var(--secondary) !important;
+  width: 1.8rem;
+}
+
+.btn-fakely-secondary:hover {
+  background-color: var(--secondary) !important;
+  color: white !important;
+}
+.large{
+  width: 12rem;
+}

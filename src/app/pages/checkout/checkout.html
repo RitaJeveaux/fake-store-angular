@@ -61,10 +61,10 @@
       @if (checkoutForm.get('expiryDate')?.invalid && checkoutForm.get('expiryDate')?.touched) {
       <div class="text-danger">
         @if (checkoutForm.get('expiryDate')?.errors?.['required']) {
-        <div>A data de validade é obrigatória.</div>
+        <div>The expiration date is required.</div>
         }
         @if (checkoutForm.get('expiryDate')?.errors?.['pattern']) {
-        <div>Formato de data inválido.</div>
+        <div>Invalid date format.</div>
         }
       </div>
       }
@@ -75,13 +75,13 @@
       @if (checkoutForm.get('securityCode')?.invalid && checkoutForm.get('securityCode')?.touched) {
       <div class="text-danger">
         @if (checkoutForm.get('securityCode')?.errors?.['required']) {
-        <div>O código de segurança é obrigatório.</div>
+        <div>The security code is required.</div>
         }
         @if (checkoutForm.get('securityCode')?.errors?.['minlength'] || checkoutForm.get('securityCode')?.errors?.['maxlength']) {
-        <div>O código de segurança deve ter 3 dígitos.</div>
+        <div>The security code must be 3 digits long.</div>
         }
         @if (checkoutForm.get('securityCode')?.errors?.['numeric']) {
-        <div>O código de segurança deve conter apenas números.</div>
+        <div>The security code must contain only numbers.</div>
         }
       </div>
       }
@@ -89,5 +89,5 @@
   </div>
 
 
-  <button type="submit" [disabled]="checkoutForm.invalid" class="btn btn-primary">Finalizar compra</button>
+  <button type="submit" [disabled]="checkoutForm.invalid" class="btn btn-fakely-primary">Place Order</button>
 </form>

@@ -1,0 +1,19 @@
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.btn-fakely-primary {
+  background-color: var(--primary) !important;
+  color: white;
+  border: none;
+}
+
+.btn-fakely-primary:hover {
+  background-color: var(--primary-dark) !important;
+  color: white !important;
+}
