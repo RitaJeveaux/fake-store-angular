@@ -38,3 +38,47 @@ nav {
 :host ::ng-deep .nav-item {
   margin-left: 10px;
 }
+
+/* Media Queries for Responsive Header */
+
+@media (max-width: 1024px) {
+  header {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    padding: 1rem;
+  }
+
+  nav {
+    margin-top: 0;
+    margin-right: 0;
+    justify-self: end;
+  }
+
+  .logo {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 150px;
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+
+  :host ::ng-deep .nav-item {
+    margin: 0 5px;
+  }
+}

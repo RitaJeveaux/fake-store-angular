@@ -4,7 +4,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductService } from '../../services/product-service';
 import { Store } from '@ngrx/store';
 import * as CartActions from '../../store/cart-actions';
-import { Product } from '../../types';
+import { Product } from '../../types/types';
 
 
 @Component({
