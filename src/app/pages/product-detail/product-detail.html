@@ -19,7 +19,7 @@
           <div>
             <p class="card-text">Price: <strong>{{ product.price | currency:'US ' }}</strong></p>
           </div>
-          <div class="d-grid gap-2 my-4">
+          <div class="d-grid gap-2 my-4 d-md-flex">
             <button (click)="addToCart()" class="btn btn-fakely">Add to Cart</button>
             <a routerLink="/" class="btn btn-secondary">Home</a>
           </div>
