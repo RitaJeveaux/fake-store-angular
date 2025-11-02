@@ -2,17 +2,20 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CustomValidators } from '../../validators/custom.validators';
+import { Store, StoreModule } from '@ngrx/store';
+import { clearCart } from '../../store/cart-actions';
 
 
 @Component({
   selector: 'app-checkout',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, StoreModule],
   templateUrl: './checkout.html',
   styleUrl: './checkout.css',
 })
 export class Checkout {
   checkoutForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  isFormSubmitted = false;
+  constructor(private fb: FormBuilder, private store: Store) {
     this.checkoutForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
@@ -42,6 +45,8 @@ export class Checkout {
 
   onSubmit() {
     if (this.checkoutForm.valid) {
+      this.isFormSubmitted = true;
+      this.store.dispatch(clearCart());
       console.log('Formulário enviado:', this.checkoutForm.value);
     }
   }

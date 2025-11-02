@@ -20,6 +20,14 @@
   background-color: var(--secondary) !important;
   color: white !important;
 }
+
+.product-name {
+  max-width: 300px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .large{
   width: 12rem;
 }

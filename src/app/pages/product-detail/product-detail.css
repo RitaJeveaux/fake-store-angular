@@ -34,3 +34,23 @@
   background-color: var(--secondary-dark);
   color: white;
 }
+
+@media (max-width: 768px) {
+  .product-detail .row {
+    flex-direction: column;
+  }
+
+  .card-title {
+    display: block !important;
+  }
+
+  .product-detail .col-md-5,
+  .product-detail .col-md-7 {
+    width: 100%;
+  }
+
+  .product-detail img {
+    max-height: 250px;
+    border-radius: 0.25rem 0.25rem 0 0 !important;
+  }
+}

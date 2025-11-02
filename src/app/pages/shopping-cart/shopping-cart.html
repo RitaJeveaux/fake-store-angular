@@ -17,7 +17,7 @@
         <tbody>
           @for (item of items; track item.id) {
           <tr>
-            <td>{{ item.title }}</td>
+            <td class="product-name">{{ item.title }}</td>
             <td>{{ item.price | currency:'US ' }}</td>
             <td>{{item.quantity}}</td>
             <td class="text-end">
