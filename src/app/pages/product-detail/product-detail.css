@@ -28,12 +28,27 @@
 .btn-fakely {
   background-color: var(--secondary);
   color: white;
+  width: 10rem;
 }
 
 .btn-fakely:hover {
   background-color: var(--secondary-dark);
   color: white;
 }
+
+.btn-fakely-primary {
+  background-color: var(--primary) !important;
+  color: white;
+  border-color: none;  
+  width: 10rem;
+}
+
+
+.btn-fakely-primary:hover {
+  background-color: var(--primary-dark) !important;
+  color: white !important;
+}
+
 
 @media (max-width: 768px) {
   .product-detail .row {

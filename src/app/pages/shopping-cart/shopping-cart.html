@@ -5,33 +5,61 @@
 
       @if (cartItems | async; as items) {
       @if (items.length > 0) {
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th class="text-end"></th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (item of items; track item.id) {
-          <tr>
-            <td class="product-name">{{ item.title }}</td>
-            <td>{{ item.price | currency:'US ' }}</td>
-            <td>{{item.quantity}}</td>
-            <td class="text-end">
-              <div> <button (click)="removeItem(item.id)" class="btn btn-sm btn-outline-danger btn-fakely-secondary ">
-                  <strong>-</strong></button>
-                <button (click)="addToCart(item)" class="btn btn-sm btn-outline btn-fakely-primary ms-2">
-                  <strong>+</strong>
-                </button>
-              </div>
-            </td>
-          </tr>
-          }
-        </tbody>
-      </table>
+
+      <!-- Desktop View -->
+      <div class="d-none d-md-block">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th class="text-end"></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of items; track item.id) {
+            <tr>
+              <td class="product-name">{{ item.title }}</td>
+              <td>{{ item.price | currency:'US ' }}</td>
+              <td>{{item.quantity}}</td>
+              <td class="text-end">
+                <div>
+                  <button (click)="removeItem(item.id)" class="btn btn-sm btn-outline-danger btn-fakely-secondary">
+                    <strong>-</strong>
+                  </button>
+                  <button (click)="addToCart(item)" class="btn btn-sm btn-outline btn-fakely-primary ms-2">
+                    <strong>+</strong>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile View -->
+      <div class="d-block d-md-none">
+        @for (item of items; track item.id) {
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title product-name">{{ item.title }}</h5>
+            <p class="card-text"><strong>Price:</strong> {{ item.price | currency:'US ' }}</p>
+            <p class="card-text"><strong>Quantity:</strong> {{ item.quantity }}</p>
+            <div class="d-flex justify-content-end">
+              <button (click)="removeItem(item.id)" class="btn btn-sm btn-outline-danger btn-fakely-secondary">
+                <strong>-</strong>
+              </button>
+              <button (click)="addToCart(item)" class="btn btn-sm btn-outline btn-fakely-primary ms-2">
+                <strong>+</strong>
+              </button>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+
       <div class="text-end">
         <h4>Total: {{ totalPrice | async | currency:'US ' }}</h4>
       </div>
